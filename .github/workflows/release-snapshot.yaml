@@ -15,6 +15,7 @@ permissions: {}
 
 jobs:
   release-snapshot:
+    timeout-minutes: 30
     name: Release unversioned snapshot
     runs-on: ubuntu-20.04
     env:
