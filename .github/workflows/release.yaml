@@ -15,6 +15,7 @@ env:
   KIND_IMAGE: "kindest/node:v1.21.1@sha256:69860bda5563ac81e3c0057d654b5253219618a22ec3a346306239bba8cfa1a6"
 jobs:
   unit-tests:
+    timeout-minutes: 30
     name: Run unit tests
     runs-on: ubuntu-20.04
     steps:
@@ -134,6 +135,7 @@ jobs:
           OPERATOR_NAMESPACE: starboard-system
           OPERATOR_TARGET_NAMESPACES: default
   release:
+    timeout-minutes: 30
     name: Release
     needs:
       - itest-starboard
